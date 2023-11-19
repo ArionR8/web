@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.end-container {
+  display: flex;
+  justify-content: center;
+  background-color: none;
+  border-top: 1px solid grey;
+}
+.end-container > div {
+  background-color: none;
+  width: 100px;
+  margin: 10px;
+  padding-top:15px;
+  text-align: center;
+  font-size: 17px;
+}
+.endtextcontainer{
+    display: flex;
+  justify-content: center;
+  background-color: none;
+}
+.endtextcontainer > div{
+    background-color: none;
+color:grey;
+padding-bottom:5px;
+  width: 100px;
+  padding-top:0px;
+  text-align: center;
+  font-size: 10px;
+}
+.paycars-container{
+    border-top:1px solid grey;
+    display: flex;
+  justify-content: center;
+  background-color: none;
+}
+.paycars-container > div{
+  padding-right:3px;
+  padding-left:2px;
+    background-color: none;
+  margin-top:5px;
+  padding-top:15px;
+  text-align: center;
+}
+.follow-container{
+    display: flex;
+  justify-content: center;
+  background-color: none;
+}
+.follow-container >div{
+    background-color: none;
+color:grey;
+  width: 100px;
+  padding-top:50px;
+  text-align: center;
+  font-size: 15px;
+}
+.sociallogodiv{
+    display: flex;
+  justify-content: center;
+  background-color: none;
+}
+.sociallogodiv > div{
+  background-color: none;
+  width: 10px;
+  margin-top:5px;
+  padding-right:20px;
+  padding-left:10px;
+  padding-bottom:25px;
+  text-align: center;
+}
+a.webend {
+text-decoration:none;
+color:grey;
+}
+a:hover.webend{
+background-color:none;
+color:grey;
+border-bottom:1px solid grey;
+}
+a {
+text-decoration:none;
+color:red;
+}
+a:hover{
+background-color:none;
+color:white;
+}
+ul{
+  list-style-type:none;
+}
+li{
+  float:none;
+}
+li a{
+  text-align:none;
+  text-decoration:none;
+}
+li a:hover{
+background-color:none;
+color:none;
+}
+ul.navigatorul {
+  z-index: 1;
+  border-bottom:1px solid grey;
+margin:0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  position:fixed;
+  width:100%;
+  top:0;
+}
+li.navigatoril {
+  float: left;
+  font-size:20px;
+}
+li a.navigatora {
+  display: block;
+  color: rgb(26, 80, 147);
+  text-align: center;
+  padding: 10px 19px;
+  text-decoration: none;
+}
+li a.profile{
+  display: block;
+  color: black;
+  text-align: center;
+  padding-top:7px;
+  text-decoration: none;
+}
+li a:hover.navigatora{
+background-color:none;
+border-bottom:3px solid white;
+color:grey;
+}
+.sociallogo{
+  height:20px;
+  width:20px;
+}
+.cardslogo{
+  height:20px;
+  background-color:white;
+  box-shadow: 0px 0px 1px 1px rgb(231, 230, 230);
+  border-radius:2px;
+}
+
+
+/*home page images*/
+  .slideshow-container{
+    padding:0px;
+    max-width: 100%;
+    margin:auto;
+  }
+  .dot{
+    text-decoration: none;
+  }
+  .active{
+    background-color: #717171;
+  }
+  .fade {
+  animation-name: fade;
+  animation-duration: 0.0s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.text {
+  color: orange;
+  font-size: 55px;
+  padding: 8px 12px;
+  position:absolute;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <div style="padding-top:40px;">
+<ul class="navigatorul">
+  <li class="navigatoril" style="padding-left:5%;">  <a class="navigatora" href="#home">HappyMindset</a></li>
+  <li class="navigatoril"><a class="navigatora" href="#knowledge">My space</a></li>
+  <li class="navigatoril"><a class="navigatora" href="#nutrition">Trainers</a></li>
+  <li class="navigatoril"> <a class="navigatora" href="#shop">Shop</a></li>
+  <li class="navigatoril" style="float:right;padding-right:5%;"><a class="profile" href="profil"><img src="profile.png" style="height:25px;"></a></li>
+</ul>
+</div>
+<div class="slideshow-container">
+  <div class="text">HappyMindset</div>
+  <div class="mySlides fade">
+<img src="mountain-road-with-blue-sky.jpg" style="width:100%;">
+  </div>
+  <div class="mySlides fade">
+<img src="high-angle-male-swimmer-water-pool.jpg" style="width:100%;">
+  </div>
+    <div class="mySlides fade">
+<img src="teen-schoolgirl-with-book-floor.jpg" style="width:100%;">
+  </div>
+</div>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2500); // Change image every 2 seconds
+  }
+  </script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="end-container">
+  <div><a class="webend" href="aboutus">about us</a></div>
+  <div><a class="webend" href="privaci">privaci policy</a></div>
+  <div><a class="webend" href="error">report error</a></div>
+  <div><a class="webend" href="cookiedetails">cookie details</a></div>
+</div>
+    <div class="follow-container"> 
+        <div>Follow</div>
+    </div>
+
+<div class="sociallogodiv">
+    <div><a href="facebook"><img class="sociallogo" src="facebooklogo.png" ></a></div>
+    <div><a  href="insta"><img class="sociallogo" src="instagramlogo-removebg-preview.png"></a></div>
+    <div><a href="tiktok"><img class="sociallogo" src="tiktoklogo-removebg-preview.png"></a></div>
+  </div>
+  <div class="paycars-container">
+    <div><img class="cardslogo" src="applepay.png"></div>
+    <div><img class="cardslogo" src="visapay.jpg"></div>
+    <div><img class="cardslogo" src="googlepay.png"></div>
+    <div><img class="cardslogo" src="mastercardpay.jpg"></div>
+    <div><img class="cardslogo" src="paypalpay.png"></div>
+  </div>
+  <div class="endtextcontainer">
+    <div>@2023 HappyMindset</div>
+  </div>
+</div>
+</body>
+</html>
