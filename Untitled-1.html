@@ -80,62 +80,6 @@ background-color:none;
 color:grey;
 border-bottom:1px solid grey;
 }
-a {
-text-decoration:none;
-color:red;
-}
-a:hover{
-background-color:none;
-color:white;
-}
-ul{
-  list-style-type:none;
-}
-li{
-  float:none;
-}
-li a{
-  text-align:none;
-  text-decoration:none;
-}
-li a:hover{
-background-color:none;
-color:none;
-}
-ul.navigatorul {
-  z-index: 1;
-  border-bottom:1px solid grey;
-margin:0;
-  padding: 0;
-  overflow: hidden;
-  background-color: white;
-  position:fixed;
-  width:100%;
-  top:0;
-}
-li.navigatoril {
-  float: left;
-  font-size:20px;
-}
-li a.navigatora {
-  display: block;
-  color: rgb(26, 80, 147);
-  text-align: center;
-  padding: 10px 19px;
-  text-decoration: none;
-}
-li a.profile{
-  display: block;
-  color: black;
-  text-align: center;
-  padding-top:7px;
-  text-decoration: none;
-}
-li a:hover.navigatora{
-background-color:none;
-border-bottom:3px solid white;
-color:grey;
-}
 .sociallogo{
   height:20px;
   width:20px;
@@ -175,18 +119,227 @@ color:grey;
   position:absolute;
   text-align: center;
 }
+a {
+    text-decoration:none;
+    color:red;
+    }
+    a:hover{
+    background-color:none;
+    color:white;
+    }
+    ul{
+      list-style-type:none;
+    }
+    li{
+      float:none;
+    }
+    li a{
+      text-align:none;
+      text-decoration:none;
+    }
+    li a:hover{
+    background-color:none;
+    color:none;
+    }
+    ul.navigatorul {
+      z-index: 1;
+      border-bottom:1px solid grey;
+    margin:0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+      position:fixed;
+      width:100%;
+      top:0;
+    }
+    li.weblogoli{
+        float:left;
+        padding-left:47%;
+      width:100%;  
+    }
+    li.navigatoril {
+      float: left;
+      font-size:20px;
+	  padding-left:2%;
+    }
+    li a.navigatora {
+      display: block;
+      color: rgb(26, 80, 147);
+      text-align: center;
+      padding: 16px 20px 6px 10px;
+      text-decoration: none;
+    }
+    li a.profile{
+      display: block;
+      color: black;
+      text-align: center;
+      padding-top:17px;
+      text-decoration: none;
+    }
+    li a:hover.navigatora{
+    background-color:none;
+    color:grey;
+    }
+
+    /* search box*/
+	* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--bg: #e3e4e8;
+	--fg: #17181c;
+	--input: #ffffff;
+	--primary: #255ff4;
+	--dur: 1s;
+	font-size: 10px;
+}
+body, input {
+	color: var(--fg);
+	font: 1em/1.5 Hind, sans-serif;
+}
+form, input, .caret {
+	margin: auto;
+}
+form {
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	max-width: 17em;
+	margin:112px 0 0 66.5%;
+}
+input, .caret {
+	display: block;
+	transition: all calc(var(--dur) * 0.5) linear;
+}
+input {
+	background: transparent;
+	border-radius: 50%;
+	box-shadow: 0 0 0 0.25em inset;
+	caret-color: var(--primary);
+	width: 2em;
+	height: 2em;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+input:focus, input:valid {
+	background: var(--input);
+	border-radius: 0.25em;
+	box-shadow: 0px 0px 1px 1px rgb(231, 230, 230);
+	padding: 0.75em 1em;
+	transition-duration: calc(var(--dur) * 0.25);
+	transition-delay: calc(var(--dur) * 0.25);
+	width: 100%;
+	height: 3em;
+}
+input:focus {
+	animation: showCaret var(--dur) steps(1);
+	outline: transparent;
+}
+input:focus + .caret, input:valid + .caret {
+	animation: handleToCaret var(--dur) linear;
+	background: transparent;
+	width: 1px;
+	height: 1.5em;
+	transform: translate(0,-1em) rotate(-180deg) translate(7.5em,-0.25em);
+}
+input::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+label {
+	color: #e3e4e8;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+.caret {
+	background: currentColor;
+	border-radius: 0 0 0.125em 0.125em;
+	margin-bottom: -0.6em;
+	width: 0.25em;
+	height: 1em;
+	transform: translate(0,-1em) rotate(-45deg) translate(0,0.875em);
+	transform-origin: 50% 0;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {	
+	:root {
+		--bg: #17181c;
+		--fg: #e3e4e8;
+		--input: #2e3138;
+		--primary: #5583f6;
+	}
+}
+
+/* Animations */
+@keyframes showCaret {
+	from {
+		caret-color: transparent;
+	}
+	to {
+		caret-color: var(--primary);
+	}
+}
+@keyframes handleToCaret {
+	from {
+		background: currentColor;
+		width: 0.25em;
+		height: 1em;
+		transform: translate(0,-1em) rotate(-45deg) translate(0,0.875em);
+	}
+	25% {
+		background: currentColor;
+		width: 0.25em;
+		height: 1em;
+		transform: translate(0,-1em) rotate(-180deg) translate(0,0.875em);
+	}
+	50%, 62.5% {
+		background: var(--primary);
+		width: 1px;
+		height: 1.5em;
+		transform: translate(0,-1em) rotate(-180deg) translate(7.5em,2.5em);
+	}
+	75%, 99% {
+		background: var(--primary);
+		width: 1px;
+		height: 1.5em;
+		transform: translate(0,-1em) rotate(-180deg) translate(7.5em,-0.25em);
+	}
+	87.5% {
+		background: var(--primary);
+		width: 1px;
+		height: 1.5em;
+		transform: translate(0,-1em) rotate(-180deg) translate(7.5em,0.125em);
+	}
+	to {
+		background: transparent;
+		width: 1px;
+		height: 1.5em;
+		transform: translate(0,-1em) rotate(-180deg) translate(7.5em,-0.25em);
+	}
+}
 </style>
 </head>
 <body>
-  <div style="padding-top:40px;">
-<ul class="navigatorul">
-  <li class="navigatoril" style="padding-left:5%;">  <a class="navigatora" href="#home">HappyMindset</a></li>
-  <li class="navigatoril"><a class="navigatora" href="#knowledge">My space</a></li>
-  <li class="navigatoril"><a class="navigatora" href="#nutrition">Trainers</a></li>
-  <li class="navigatoril"> <a class="navigatora" href="#shop">Shop</a></li>
-  <li class="navigatoril" style="float:right;padding-right:5%;"><a class="profile" href="profil"><img src="profile.png" style="height:25px;"></a></li>
-</ul>
-</div>
+    <div style="padding-top:40px;">
+        <ul class="navigatorul">
+            <li class="weblogoli"><img src="weblogo.PNG" style="height:130px;"></li>
+          <li class="navigatoril" style="padding-left:23%;"><a class="navigatora" href="#knowledge">My space</a></li>
+          <li class="navigatoril"><a class="navigatora" href="#nutrition">Trainers</a></li>
+          <li class="navigatoril"> <a class="navigatora" href="#shop">Shop</a></li>
+		  <li class="navigatoril" style="float:right;padding-right:24%;"><a class="profile" href="profil"><img src="profile.png" style="height:25px;"></a></li>
+       </ul>
+        </div>
+		<form>
+			<label for="search">Search</label>
+			<input id="search" type="search" pattern=".*\S.*" required>
+			<span class="caret"></span>
+		</form>
 <div class="slideshow-container">
   <div class="text">HappyMindset</div>
   <div class="mySlides fade">
