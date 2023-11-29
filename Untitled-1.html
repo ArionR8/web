@@ -40,12 +40,12 @@ a {
   box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.2);
   background-color:white;
   flex-wrap: wrap;
- }
+}
 .flex-nav-container > div{
   color:grey;
   text-align:center;
   font-size: 20px;
-  margin: 0px 20px 5px 20px;
+  margin: 0px 0px 0px 40px;
 }
 .flex-nav-container > div >a{
   text-decoration:none;
@@ -69,14 +69,14 @@ div.nav-dropdown {
   display: none;
   position: absolute;
   background-color: white;
-  margin-top:9px;
+  margin-top:12px;
   min-width: 130px;
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 .nav-dropdown-content a {
   color: rgb(26, 80, 147);
-  padding: 12px 16px;
+  padding: 12px 24px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -84,6 +84,7 @@ div.nav-dropdown {
 .nav-dropdown-content a:hover {color:grey;border-left:2px solid grey;}
 .nav-dropdown:hover .nav-dropdown-content {display: block;}
 /*Navigator-END*/
+
 /*Footer-start*/
 .flex-footer-container {
   display:flex;
@@ -103,7 +104,6 @@ div.nav-dropdown {
   text-decoration:none;
 color:grey;
 }
-
 .flex-footer-container > div >a:hover{
 border-bottom:1px solid grey;
 }
@@ -133,6 +133,7 @@ height:20px;
   border-radius:2px;
 }
  /*Footer - END*/
+
  /*Wellcome container - START*/
 .slideshow-container{
     padding:0px;
@@ -167,14 +168,14 @@ height:20px;
   <div class="flex-nav-container">
     <div style="flex:100%"><a href="#home"><img src="weblogo.PNG" style="height:100px;"></a></div> 
     <div><a href="MySpace">My Space</a></div> 
-    <div class="nav-dropdown"><a href="javascript:void(0)" class="nav-dropbtn" href="#discovery">Discover</a>
+    <div class="nav-dropdown" style="width:120px; padding-bottom:12px;"><a href="javascript:void(0)" class="nav-dropbtn" href="#discovery">Discover</a>
       <div class="nav-dropdown-content">
         <a href="#">Books</a>
         <a href="#">Nutritions</a>
         <a href="#">Trainers</a>
       </div>
     </div>
-    <div style="margin-right:10%;"><a href="#trainer">Trainers</a></div>
+    <div style="margin: 0 17% 0 40px;"><a href="#trainer">Trainers</a></div>
     <div><a href="#profil"><img src="profile.png" style="height:25px;"></a></div>   
   </div>
   
