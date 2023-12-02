@@ -274,40 +274,42 @@ span.carusel-txt:nth-child(18) {
 }
 /*Wellcome container - END*/
 
+
 /*Login form-START*/
-  /* For Login form animation - remove this coment!
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-*/
-.moving-border {
+.login-background {
   left:40%;
-  
   top: 24%;
   width: 350px;
-  height: 65%;
   position:fixed;
-  background: #111;
+  color: hsl(324, 70%, 45%);
+  animation: wheelHueColor 10s infinite;
+  background-color: currentColor;
 }
-.moving-border::before,
-.moving-border::after {
-  content: "";
-  position: absolute;
-  inset: -0.2rem;
-  z-index: -1;
-  background: linear-gradient(var(--angle), 
-    orange,  grey, blue);
-  animation: rotate 10s linear infinite;
-}
-.moving-border::after {
-  filter: blur(10px);
-}
-@keyframes rotate {
-  0%     { --angle: 0deg; }
-  100%   { --angle: 360deg;
+@supports (background-blend-mode: overlay) {
+  .login-background {
+    background-image: linear-gradient(45deg, white 10%, black 90%);
+    background-blend-mode: overlay;
   }
+}
+@keyframes wheelHueColor {
+  from, to { color: hsl(37, 100%, 49%); }
+  10%      { color: hsl(36, 65%, 45%); }
+  20%      { color: hsl(36, 100%, 50%); }
+  30%      { color: hsl(34, 51%, 50%); }
+  40%      { color: hsl(36, 85%, 58%); }
+  50%      { color: hsl(196, 73%, 59%); }
+  60%      { color: hsl(180, 75%, 35%); }
+  70%      { color: hsl(216, 60%, 45%); }
+  80%      { color: hsl(252, 65%, 50%); }
+  90%      { color: hsl(246, 100%, 50%); }
+}
+
+
+/* misc */
+* { margin: 0; padding: 0; }
+.login-background {
+  min-height: 400px;
+  display: flex;
 }
 /* The Modal (background) */
 .modal {
@@ -342,6 +344,7 @@ span.carusel-txt:nth-child(18) {
   overflow: hidden;
   transition: .5s;
   margin-top: 80px;
+  margin-bottom:10px;
   margin-left:3%;
   letter-spacing: 4px
 }
@@ -353,7 +356,7 @@ span.carusel-txt:nth-child(18) {
 .modal h2 {
   margin: 0 0 40px;
   padding: 45px;
-  color: orange;
+  color: white;
   text-align: center;
 }
 .modal-content  .user-box {
@@ -429,8 +432,8 @@ span.carusel-txt:nth-child(18) {
   
    <!--Login form-->
    <div id="id01" class="modal">
-     <div class="moving-border">
-     <form class="modal-content animate" action="/action_page.php" method="post">
+     <div class="login-background">
+     <form class="modal-content animate" action="/action_page.php" method="post" style="width:100%;margin:5px 5px 5px 5px;">
         
      <h2>Login</h2>
    
@@ -471,7 +474,7 @@ span.carusel-txt:nth-child(18) {
         <span class="carusel-txt">the transformative</span> <span class="carusel-txt"> magic </span>
         <span class="carusel-txt">of literature</span><span class="carusel-txt">nurture</span>
         <span class="carusel-txt">your mental</span> <span class="carusel-txt">well-being. </span><br><br><br><br>
-        <span class="carusel-txt"><a href="#div" style="font-size:30px;color:white;background-color:rgb(231, 178, 82);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
+        <span class="carusel-txt" style="text-shadow: 0px 0px 0px ;"><a href="#div" style="font-size:30px;color:white;background-color:orange;border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
       </h1></div>
   <img src="books.jpg" style="width:100%;">
     </div>
@@ -483,7 +486,7 @@ span.carusel-txt:nth-child(18) {
       <span class="carusel-txt">nutrition,</span> <span class="carusel-txt"> innovative </span>
       <span class="carusel-txt">dishes, </span><span class="carusel-txt"> and </span>
       <span class="carusel-txt">their </span> <span class="carusel-txt">recipes.</span><br><br><br><br>
-      <span class="carusel-txt"><a href="#div" style="font-size:30px;color:white;background-color:rgb(231, 178, 82);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
+      <span class="carusel-txt" style="text-shadow: 0px 0px 0px ;"><a href="#div" style="font-size:30px;color:white;background-color:orange;border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
     </h1></div>
   <img src="food.jpg" style="width:100%;">
     </div>
@@ -495,7 +498,7 @@ span.carusel-txt:nth-child(18) {
           <span class="carusel-txt">of training,</span> <span class="carusel-txt">offering</span>
           <span class="carusel-txt">diverse workout</span><span class="carusel-txt">routines for both</span>
           <span class="carusel-txt">indoor</span> <span class="carusel-txt">and</span> <span class="carusel-txt">outdoor</span><br><br><br>
-          <span class="carusel-txt"><a href="#div" style="font-size:30px;color:white;background-color:rgb(231, 178, 82);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
+          <span class="carusel-txt" style="text-shadow: 0px 0px 0px ;"><a href="#div" style="font-size:30px;color:white;background-color:orange;border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
         </h1></div>
         <img src="traing.jpg" style="width:100%;">
     </div>
