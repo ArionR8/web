@@ -68,6 +68,7 @@ div.nav-dropdown {
   display: inline-block;
 }
 .nav-dropdown-content {
+  font-size:20px;
   display: none;
   position: absolute;
   background-color: white;
@@ -87,6 +88,7 @@ div.nav-dropdown {
 .nav-dropdown-content a:hover {color:grey;border-left:2px solid grey;}
 .nav-dropdown:hover .nav-dropdown-content {display: block;}
 /*Navigator-END*/
+
 /*Footer-start*/
 .flex-footer-container {
   display:flex;
@@ -105,10 +107,15 @@ div.nav-dropdown {
 .flex-footer-container > div >a{
   text-decoration:none;
 color:grey;
+margin-bottom:1px;
 }
 
 .flex-footer-container > div >a:hover{
-border-bottom:1px solid grey;
+  text-decoration:none;
+color:grey;
+}
+.footer-txt a:hover{
+  border-bottom:1px solid grey;
 }
 .flex-footer-container > div >a >img{
   height:20px;
@@ -156,12 +163,114 @@ height:20px;
   from {opacity: .4} 
   to {opacity: 1}
 }
-.text {
-  color: orange;
-  font-size: 55px;
-  padding: 8px 12px;
-  position:absolute;
+.flex-txt {
+  display:flex;
+  justify-content:center;
+  background-color:none;
+  flex-wrap: wrap;
+ }
+.flex-txt > div{
+  text-align:center;
+}
+h1 {
+  color:white;
+  text-shadow: 0px 0px 10px black;
+  font-size: 45px;
+  position: absolute;
   text-align: center;
+  font-family: "Montserrat Medium";
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+span.carusel-txt {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span.carusel-txt:nth-child(1) {
+  animation: fade-in 0.4s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(5) {
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(7) {
+  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(8) {
+  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(10) {
+  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(11) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(12) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(13) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(14) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(15) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(17) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.carusel-txt:nth-child(18) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 /*Wellcome container - END*/
 
@@ -353,20 +462,44 @@ height:20px;
    }
    </script>
   
-  
   <div class="slideshow-container">
-    <div class="text">HappyMindset</div>
     <div class="mySlides fade">
-  <img src="mountain-road-with-blue-sky.jpg" style="width:100%;">
+        <div class="flex-txt"><h1 style="width:50%;"><br>
+        <span class="carusel-txt">Immerse</span> <span class="carusel-txt">yourself</span>
+        <span class="carusel-txt">in a journey</span> <span class="carusel-txt">of exploration</span>
+        <span class="carusel-txt">and</span> <span class="carusel-txt">let</span>
+        <span class="carusel-txt">the transformative</span> <span class="carusel-txt"> magic </span>
+        <span class="carusel-txt">of literature</span><span class="carusel-txt">nurture</span>
+        <span class="carusel-txt">your mental</span> <span class="carusel-txt">well-being. </span><br><br><br><br>
+        <span class="carusel-txt"><a href="#div" style="font-size:30px;color:white;background-color:rgb(231, 178, 82);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
+      </h1></div>
+  <img src="books.jpg" style="width:100%;">
     </div>
     <div class="mySlides fade">
-  <img src="high-angle-male-swimmer-water-pool.jpg" style="width:100%;">
+      <div class="flex-txt"><h1 style="width:50%;"><br>
+      <span class="carusel-txt">Our</span> <span class="carusel-txt">digital</span>
+      <span class="carusel-txt">haven</span> <span class="carusel-txt">offers </span>
+      <span class="carusel-txt">knowledge </span><span class="carusel-txt">on food </span>
+      <span class="carusel-txt">nutrition,</span> <span class="carusel-txt"> innovative </span>
+      <span class="carusel-txt">dishes, </span><span class="carusel-txt"> and </span>
+      <span class="carusel-txt">their </span> <span class="carusel-txt">recipes.</span><br><br><br><br>
+      <span class="carusel-txt"><a href="#div" style="font-size:30px;color:white;background-color:rgb(231, 178, 82);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
+    </h1></div>
+  <img src="food.jpg" style="width:100%;">
     </div>
       <div class="mySlides fade">
-  <img src="teen-schoolgirl-with-book-floor.jpg" style="width:100%;">
+        <div class="flex-txt"><h1 style="width:50%;"><br>
+          <span class="carusel-txt">Embark</span> <span class="carusel-txt">on a</span>
+          <span class="carusel-txt">fitness</span> <span class="carusel-txt">journey </span>
+          <span class="carusel-txt">that emphasizes</span><span class="carusel-txt">the importance</span>
+          <span class="carusel-txt">of training,</span> <span class="carusel-txt">offering</span>
+          <span class="carusel-txt">diverse workout</span><span class="carusel-txt">routines for both</span>
+          <span class="carusel-txt">indoor</span> <span class="carusel-txt">and</span> <span class="carusel-txt">outdoor</span><br><br><br>
+          <span class="carusel-txt"><a href="#div" style="font-size:30px;color:white;background-color:rgb(231, 178, 82);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
+        </h1></div>
+        <img src="traing.jpg" style="width:100%;">
     </div>
   </div>
-  
   <div style="text-align:center">
     <span class="dot"></span> 
     <span class="dot"></span> 
@@ -390,15 +523,15 @@ height:20px;
       }
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 2500); // Change image every 2 seconds
+      setTimeout(showSlides, 6000); // Change image every x seconds
     }
     </script>
   
   <div class="flex-footer-container">
-    <div><a href="aboutus">about us</a></div>
-    <div><a href="privaci">privaci policy</a></div>
-    <div><a href="error">report error</a></div>
-    <div><a href="cookiedetails">cookie details</a></div>
+    <div class="footer-txt"><a href="aboutus">about us</a></div>
+    <div class="footer-txt"><a href="privaci">privaci policy</a></div>
+    <div class="footer-txt"><a href="error">report error</a></div>
+    <div class="footer-txt"><a href="cookiedetails">cookie details</a></div>
     <div style="margin-bottom:0px;margin-top:60px;flex:100%">Follow</div>    
     <div style="width:20px;"><a href="facebook"><img src="facebooklogo.png"></a></div>
     <div style="width:20px;"><a href="insta"><img src="instagramlogo-removebg-preview.png"></a></div>
