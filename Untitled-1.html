@@ -410,7 +410,64 @@ span.carusel-txt:nth-child(18) {
   }
 }
 /*Login form-END*/
+/*body dives*/
+.flex-badge-container {
+	margin-top:30px;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  background-color:white;
+  flex-wrap: wrap;
+ }
+.badge {
+  display: block;
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  cursor: pointer;
+  background-image: none;
+  background:no-repeat 50% 50%;
+  background-size: 110%;
+  border-radius: 5%;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  box-shadow: 0px 0.1rem 0.5rem rgba(0, 0, 0, 0.75);
+}
 
+.badge:hover {
+  box-shadow: 0px 0.1rem 1rem rgba(0, 0, 0, 0.75);
+  background-position: 60% 50%;
+}
+.badge:hover .badgetext {
+  transform: rotate(-45deg) translate(0px) rotate(-315deg);
+  background: rgba(255, 166, 0, 0.595);
+  width: 20rem;
+  letter-spacing: 1rem;
+  line-height: 20rem;
+  height: 20rem;
+  margin-top: -3.8rem;
+  margin-left: -6rem;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+}
+.badge .badgetext {
+  display: block;
+  position: absolute;
+  width: 10rem;
+  height: 3rem;
+  line-height: 3rem;
+  left: 30%;
+  top: 19%;
+  margin-top: -5rem;
+  margin-left: -5rem;
+  font-size: 27px;
+  font-family: Raleway, sans-serif;
+  text-align: center;
+  color: #fff;
+  border-radius: 5%;
+  background: orange;
+  transform: rotate(-180deg) translate(-10rem) rotate(180deg);
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
 </style>
 </head>
 <body>  
@@ -529,7 +586,24 @@ span.carusel-txt:nth-child(18) {
       setTimeout(showSlides, 6000); // Change image every x seconds
     }
     </script>
-  
+
+  	<div class="flex-badge-container">
+      <div class='badge' style="background-image: url(placebobook.PNG);">
+        <div class='badgetext'><img src="logo-removebg-preview.png" style="width:35px;"> Books</div>
+        </div>
+        <div class='badge' style="margin-left:30px;background-image: url(frenchtost.PNG);">
+        <div class='badgetext'><img src="logo-removebg-preview.png" style="width:35px;"> Meals</div>
+        </div>
+      </div>
+      <div class="flex-badge-container" style="margin-bottom:20px;">
+        <div class='badge' style="background-image: url(running.PNG);background-size: 145%;">
+        <div class='badgetext'><img src="logo-removebg-preview.png" style="width:35px;"> Running</div>
+        </div>
+        <div class='badge' style="margin-left:30px; background-image: url(deadlift.PNG);background-size: 145%;">
+        <div class='badgetext'><img src="logo-removebg-preview.png" style="width:35px;"> Deadlift</div>
+        </div>
+      </div>
+      
   <div class="flex-footer-container">
     <div class="footer-txt"><a href="aboutus">about us</a></div>
     <div class="footer-txt"><a href="privaci">privaci policy</a></div>
