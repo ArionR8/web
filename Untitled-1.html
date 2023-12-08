@@ -43,10 +43,13 @@ a {
   box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.2);
   background-color:white;
   flex-wrap: wrap;
- }
+}
 .flex-nav-container > div{
   color:grey;
   text-align:center;
+
+  font-size: 20px;
+  margin: 0px 0px 0px 40px;
   font-size: 25px;
   width:130px;
   padding: 0px 0px 5px 0px;
@@ -75,6 +78,7 @@ div.nav-dropdown {
   display: none;
   position: absolute;
   background-color: white;
+  margin-top:12px;
   margin-top:5px;
   padding-top:3px;
   min-width: 130px;
@@ -83,6 +87,7 @@ div.nav-dropdown {
 }
 .nav-dropdown-content a {
   color: rgb(26, 80, 147);
+  padding: 12px 24px;
   padding: 12px 25px;
   text-decoration: none;
   display: block;
@@ -112,7 +117,6 @@ div.nav-dropdown {
 color:grey;
 margin-bottom:1px;
 }
-
 .flex-footer-container > div >a:hover{
   text-decoration:none;
 color:grey;
@@ -146,6 +150,7 @@ height:20px;
   border-radius:2px;
 }
  /*Footer - END*/
+
  /*Wellcome container - START*/
 .slideshow-container{
     padding:0px;
@@ -477,15 +482,20 @@ span.carusel-txt:nth-child(18) {
   <div class="flex-nav-container">
     <div style="flex:100%"><a href="#home"><img src="weblogo.PNG" style="height:100px;"></a></div> 
     <div><a href="MySpace">My Space</a></div> 
-    <div class="nav-dropdown"><a href="javascript:void(0)" class="nav-dropbtn" href="#discovery">Discover</a>
+    <div class="nav-dropdown" style="width:120px; padding-bottom:12px;"><a href="javascript:void(0)" class="nav-dropbtn" href="#discovery">Discover</a>
       <div class="nav-dropdown-content">
         <a href="#">Books</a>
         <a href="#">Nutritions</a>
         <a href="#">Trainers</a>
       </div>
     </div>
+<<<<<<< HEAD
+    <div style="margin: 0 17% 0 40px;"><a href="#trainer">Trainers</a></div>
+    <div><a href="#profil"><img src="profile.png" style="height:25px;"></a></div>   
+=======
     <div style="margin-right:10%;"><a href="#trainer">Trainers</a></div>
     <div><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="profile.png" style="height:25px;"></a></div>   
+>>>>>>> f10f1beb2b126cc957936f200478867f32f610b3
   </div>
   
    <!--Navigator-background--><div style="padding-top:130px;"></div>
