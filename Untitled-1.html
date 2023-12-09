@@ -476,6 +476,132 @@ span.carusel-txt:nth-child(18) {
   box-shadow: 0px 0rem 0.2rem rgba(0, 0, 0, 0.5);
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
+/*Cockies-display block-START*/
+.modal-for-cookies {
+  display: none; 
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content-for-cookies {
+  border-radius:5px;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  box-shadow: 0px 0rem 0.2rem rgba(51, 51, 51, 0.75);
+  width: 60%;}
+.animate-for-cookies {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+.flex-coockies-container-for-cookies {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  border-top:1px solid grey;
+  background-color:none;
+  flex-wrap: wrap;
+ }
+.flex-header-for-cookies{
+  padding:10px 0px 10px 10px;
+  flex:100%;
+  border-bottom:1px solid rgb(193, 193, 193);
+}
+
+.flex-collom-for-cookies{
+  display: flex;
+  flex-direction: column;
+background-color:white;
+  flex:20%;
+}
+.flex-collom-for-cookies > div {
+  background-color: rgb(242, 242, 242);
+  text-align:left;
+  font-size: 18px;
+  border-bottom:1px solid rgb(193, 193, 193);
+}
+.flex-collom-for-cookies > div >a {
+  color:black;
+}
+.flex-collom-for-cookies > div >a:hover {
+  background-color:white;
+}
+.full-width-link {
+      display: block; 
+      width: 100%;
+      text-align: left;
+      padding: 6px 0px 6px 10px;
+      text-decoration: none;
+    } 
+.flex-info-container-for-cookies {
+ color:grey;
+  text-align:left;
+  font-size: 17px;
+  flex:75%;
+  -webkit-flex: 70%;
+  -ms-flex: 3;
+  height: 350px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+scrollbar-color: rgb(37, 102, 255) #f1f1f1;
+}
+.content-for-cookies {
+      display: none;
+      margin-top: 20px;
+      color:black;;
+    }
+    .flex-info-container-for-cookies::-webkit-scrollbar {
+  width: 8px;
+}
+
+.flex-info-container-for-cookies::-webkit-scrollbar-thumb {
+  background-color: rgb(37, 102, 255);
+  border-radius: 6px;
+}
+
+.flex-info-container-for-cookies::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+.flex-info-container-for-cookies::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0, 94, 255); /* color of the thumb on hover */
+}
+.flex-footer-for-cookies{
+  padding:10px 0px 10px 10px;
+  flex:100%;
+ border-top:1px solid rgb(193, 193, 193);
+}
+.flex-footer-for-cookies button{
+  padding:7px 11px 7px 11px;
+  border: none;
+  outline: none;
+  background: rgb(37, 102, 255);
+  color: black;
+  font-size: 20px;
+  border-radius:2px;
+}
+.flex-footer-for-cookies button:hover{
+  border-radius:2px;
+  background: rgb(0, 94, 255);
+  color: black;
+}
 </style>
 </head>
 <body>  
@@ -489,13 +615,9 @@ span.carusel-txt:nth-child(18) {
         <a href="#">Trainers</a>
       </div>
     </div>
-<<<<<<< HEAD
-    <div style="margin: 0 17% 0 40px;"><a href="#trainer">Trainers</a></div>
-    <div><a href="#profil"><img src="profile.png" style="height:25px;"></a></div>   
-=======
+
     <div style="margin-right:10%;"><a href="#trainer">Trainers</a></div>
     <div><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="profile.png" style="height:25px;"></a></div>   
->>>>>>> f10f1beb2b126cc957936f200478867f32f610b3
   </div>
   
    <!--Navigator-background--><div style="padding-top:130px;"></div>
@@ -621,7 +743,7 @@ span.carusel-txt:nth-child(18) {
     <div class="footer-txt"><a href="aboutus">about us</a></div>
     <div class="footer-txt"><a href="privaci">privaci policy</a></div>
     <div class="footer-txt"><a href="error">report error</a></div>
-    <div class="footer-txt"><a href="cookiedetails">cookie details</a></div>
+    <div class="footer-txt"><a onclick="document.getElementById('idCoockies').style.display='block'" style="width:auto;">cookie details</a></div>
     <div style="margin-bottom:0px;margin-top:60px;flex:100%">Follow</div>    
     <div style="width:20px;"><a href="facebook"><img src="facebooklogo.png"></a></div>
     <div style="width:20px;"><a href="insta"><img src="instagramlogo-removebg-preview.png"></a></div>
@@ -635,5 +757,37 @@ span.carusel-txt:nth-child(18) {
       <div><img src="paypalpay.png"></div>
       <div style="flex:100%">@2023 HappyMindset</div>
   </div>
+  <div id="idCoockies" class="modal-for-cookies">
+    <div class="modal-content-for-cookies animate-for-cookies" action="/action_page.php" method="post">
+   <div class="flex-coockies-container-for-cookies" >
+     <div class="flex-header-for-cookies"><img src="weblogo.PNG" style="width:80px;"></div>    
+    <div class="flex-collom-for-cookies">
+   <div><a onclick="showText('<h3>Your Privacy</h3><p><br>This page provides an overview of our use of cookies and similar technologies &#40;from here we will refer to all those as <q>Cookies</q>&#41; and how to manage them. For more information please visit our Privacy Policy.</p><p>When you visit our properties and use our products and services &#40;<q>Services</q> &#41;, we use Cookies to analyse and measure our performance, customize content and serve personalized advertisements. We may place our own Cookies &#40;First-party Cookies&#41; or allow our service providers to place Cookies &#40;Third-party Cookies&#41; on your device and collect information such as your device ID, browser type and IP address so they can help us better understand your interaction with our Services. Advertisers and other advertising technology partners may also use their own third-party Cookies to collect information about your visits, deliver advertisements tailored to your interests, keep track of the number of views of a specific advertisement, analyses the effectiveness of advertisements, or provide auditing, research and reporting for advertisers. Such third parties may also match you to an existing interest category <q>e.g. automobiles</q> that they&rsquo;ve developed and provide you with more relevant advertising over time and across different websites.</p><br><p>When you click on save settings below, your preferences will be saved. You can change your settings at any time by using the consent settings module. Note that saving settings is linked to the particular browser and/or device you use to visit our Services. Saving your settings within one particular Service will not affect your choices on other Paramount Services, or if you visit this Service with another device or from a different browser. In addition, it won&rsquo;t affect any of your activities on third-party services. You have other choices to manage cookies and other tracking technologies on the internet such as using industry choice programs or managing your preferences within your browsers or devices. For more Information refer to our Privacy Policy.</p>')" class="full-width-link">Your Privacy</a></div>
+    <div> <a onclick="showText('<h3>Essential</h3><br><p>These cookies are essential for the proper functioning of our Services. Essential cookies cannot be switched off in our systems. You can set your device to block or alert you about these cookies, but some parts of the Service will not work.</p>')" class="full-width-link">Essential</a>
+   </div>
+    <div><a onclick="showText('<h3>Analytic & Performance</h3><br><p>These Cookies allow us to collect information about how visitors use our properties. Some examples include counting visits and traffic sources, so we can measure and improve the performance of our services. If you do not allow these Cookies we will not know when users have visited our properties and will not be able to monitor performance.</p>')" class="full-width-link">Analytic & Performance</a></div>
+    <div><a onclick="showText('<h3>Functional</h3><br><p>These Cookies enable the services to provide enhanced functionality and personalization. They may be set by us or by third party providers whose services we have added to our services. If you do not allow these Cookies then some or all of these services may not function properly.</p>')" class="full-width-link">Functional</a></div>
+    <div><a onclick="showText('<h3>Marketing and Advertising</h3><br><p>These Cookies may be set by us or through our services by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertising on this and on other properties. If you do not allow these Cookies, you will still see ads, but you will experience less relevant advertising.</p>')" class="full-width-link">Marketing and Advertising</a></div>
+    <div><a onclick="showText('<h3>Social Media</h3><br><p>These Cookies are set by a range of social media services that we have added to the services to enable you to share our content with your friends and networks. They are capable of tracking your browser across other sites, building up a profile of your interests to show you relevant content and advertisements on the relevant social networks. If you do not allow these Cookies you may not be able to use or see these sharing tools.</p>')" class="full-width-link">Social Media</a></div>
+   </div>
+   <div class="flex-info-container-for-cookies">
+   <div id='result' class="content-for-cookies"> </div>
+   </div>
+   <div class="flex-footer-for-cookies"><button type="button" onclick="document.getElementById('idCoockies').style.display='none'">Close</button></div> 
+   </div>
+   </div>
+   </div>
+   <script>
+     function showText(htmlContent) {
+       var resultDiv = document.getElementById('result');
+       resultDiv.innerHTML = htmlContent;
+       resultDiv.style.display = 'block';
+   
+       // Applying styles to the resultDiv
+       resultDiv.style.fontSize = '15px';
+       resultDiv.style.paddingLeft = '20px';
+       resultDiv.style.paddingRight = '10px';
+     }
+   </script>
 </body>
 </html>
