@@ -1,0 +1,179 @@
+/*Footer-start*/
+.flex-footer-container {
+    display:flex;
+    justify-content:center;
+    border-top:1px solid grey;
+    background-color:none;
+    flex-wrap: wrap;
+   }
+  .flex-footer-container > div{
+    color:grey;
+    text-align:center;
+    font-size: 17px;
+    width: 100px;
+    margin: 10px 10px 10px 10px;
+  }
+  .flex-footer-container > div >a{
+    text-decoration:none;
+  color:grey;
+  margin-bottom:1px;
+  }
+  .flex-footer-container > div >a:hover{
+    text-decoration:none;
+  color:grey;
+  }
+  .footer-txt a:hover{
+    border-bottom:1px solid grey;
+  }
+  .flex-footer-container > div >a >img{
+    height:20px;
+    width:20px;
+    
+  }
+  .flex-bottom-container{
+  display:flex;
+    justify-content:center;
+    border-top:1px solid grey;
+    background-color:none;
+    flex-wrap: wrap;
+  }
+  .flex-bottom-container > div {
+  text-align:center;
+  color:grey;
+    font-size: 12px;
+    width: 23px;
+    margin: 10px 10px 0px 10px;
+  }
+  .flex-bottom-container > div >img{
+  height:20px;
+    background-color:white;
+    box-shadow: 0px 0px 1px 1px rgb(231, 230, 230);
+    border-radius:2px;
+  }
+   /*Footer - END*/
+   
+   /*Cockies-display block-START*/
+.modal-for-cookies {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  
+  .modal-content-for-cookies {
+    border-radius:5px;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    box-shadow: 0px 0rem 0.2rem rgba(51, 51, 51, 0.75);
+    width: 60%;}
+  .animate-for-cookies {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  .flex-coockies-container-for-cookies {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    border-top:1px solid grey;
+    background-color:none;
+    flex-wrap: wrap;
+   }
+  .flex-header-for-cookies{
+    padding:10px 0px 10px 10px;
+    flex:100%;
+    border-bottom:1px solid rgb(193, 193, 193);
+  }
+  
+  .flex-collom-for-cookies{
+    display: flex;
+    flex-direction: column;
+  background-color:white;
+    flex:20%;
+  }
+  .flex-collom-for-cookies > div {
+    background-color: rgb(242, 242, 242);
+    text-align:left;
+    font-size: 18px;
+    border-bottom:1px solid rgb(193, 193, 193);
+  }
+  .flex-collom-for-cookies > div >a {
+    color:black;
+  }
+  .flex-collom-for-cookies > div >a:hover {
+    background-color:white;
+  }
+  .full-width-link {
+        display: block; 
+        width: 100%;
+        text-align: left;
+        padding: 6px 0px 6px 10px;
+        text-decoration: none;
+      } 
+  .flex-info-container-for-cookies {
+   color:grey;
+    text-align:left;
+    font-size: 17px;
+    flex:75%;
+    -webkit-flex: 70%;
+    -ms-flex: 3;
+    height: 350px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+  scrollbar-color: rgb(37, 102, 255) #f1f1f1;
+  }
+  .content-for-cookies {
+        display: none;
+        margin-top: 20px;
+        color:black;;
+      }
+      .flex-info-container-for-cookies::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .flex-info-container-for-cookies::-webkit-scrollbar-thumb {
+    background-color: rgb(37, 102, 255);
+    border-radius: 6px;
+  }
+  
+  .flex-info-container-for-cookies::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  .flex-info-container-for-cookies::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0, 94, 255); /* color of the thumb on hover */
+  }
+  .flex-footer-for-cookies{
+    padding:10px 0px 10px 10px;
+    flex:100%;
+   border-top:1px solid rgb(193, 193, 193);
+  }
+  .flex-footer-for-cookies button{
+    padding:7px 11px 7px 11px;
+    border: none;
+    outline: none;
+    background: rgb(37, 102, 255);
+    color: white;
+    font-size: 20px;
+    border-radius:2px;
+  }
+  .flex-footer-for-cookies button:hover{
+    border-radius:2px;
+    background: rgb(0, 94, 255);
+  }
