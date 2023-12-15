@@ -87,13 +87,14 @@ div.nav-dropdown {
 .nav-dropdown-content a:hover {color:grey;border-left:2px solid grey;}
 .nav-dropdown:hover .nav-dropdown-content {display: block;}
 /*Navigator-END*/
-
-
 /*Login form-START*/
 .login-background {
-  left:40%;
-  top: 24%;
-  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 370px;
+  height:500px;
   position:fixed;
   color: hsl(324, 70%, 45%);
   animation: wheelHueColor 10s infinite;
@@ -122,7 +123,7 @@ div.nav-dropdown {
 /* misc */
 * { margin: 0; padding: 0; }
 .login-background {
-  min-height: 400px;
+  min-height: auto;
   display: flex;
 }
 /* The Modal (background) */
@@ -141,48 +142,80 @@ div.nav-dropdown {
 }
 /* Modal Content/Box */
 .modal-content {
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0,0,0,.5);
-    height:100%;
 }
-.modal form input[type="submit"] {
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 200px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+.modal-content button{
   border: none;
   outline: none;
   background: transparent;
-  position: relative;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 65px 10px 65px;
   color: white;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
-  margin-top: 80px;
-  margin-bottom:10px;
-  margin-left:3%;
-  letter-spacing: 4px
+  letter-spacing: 4px;
+ 
 }
-.modal form input[type="submit"]:hover {
+.modal-content .submit button{
+  padding: 10px 15px 10px 15px;
+  font-size: 16px;
+  margin-right:220px;
+  margin-bottom:12px;
+}
+.modal-content button:hover{
   background: orange;
   color: white;
   border-radius: 5px;
 }
+.close {
+  position: absolute;
+  right:15px;
+  top:4px;
+  color: black;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
 .modal h2 {
-  margin: 0 0 40px;
-  padding: 45px;
+  margin: 0 0 10px 0;
+  padding: 2px 0 10px 0;
   color: white;
   text-align: center;
 }
 .modal-content  .user-box {
   position: relative;
+  width: 100%;
+  height:100%;
 }
 .modal-content .user-box input {
-  width: 90%;
-  margin-left:5%;
+  width:70%;
+  margin-left:15%;
   padding: 10px 0;
   font-size: 16px;
   color: #fff;
-  margin-bottom: 20px;
   border: none;
   border-bottom: 1px solid grey;
   outline: none;
@@ -190,8 +223,9 @@ div.nav-dropdown {
 }
 .modal-content .user-box label {
   position: absolute;
+  margin-left:15%;
   top:0;
-  left: 5%;
+  left: 0;
   padding: 10px 0;
   font-size: 16px;
   color: white;
@@ -201,7 +235,7 @@ div.nav-dropdown {
 .modal-content .user-box input:focus ~ label,
 .modal-content .user-box input:valid ~ label {
   top: -20px;
-  left: 5%;
+  left:0;
   color: orange;
   font-size: 12px;
 }
@@ -212,15 +246,5 @@ div.nav-dropdown {
 @keyframes animatezoom {
   from {transform: scale(0)} 
   to {transform: scale(1)}
-}
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 200px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
 }
 /*Login form-END*/

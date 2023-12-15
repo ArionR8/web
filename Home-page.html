@@ -24,45 +24,82 @@
     </div>
 
     <div style="margin-right:10%;"><a href="#trainer">Trainers</a></div>
-    <div><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="profile.png" style="height:25px;"></a></div>   
+    <div><a onclick="createProfile()" style="width:auto;"><img src="profile.png" style="height:25px;"></a></div>   
   </div>
   
-   <!--Navigator-background--><div style="padding-top:130px;"></div>
-  
+   <!--Navigator-background--><div style="padding-top:140px;"></div>
+   <div id="create-profile" class="modal">
+    <div class="login-background">
+    <div class="modal-content animate" action="/action_page.php" method="post" style="width:100%;margin:5px 5px 5px 5px;">
+<div><img src="weblogo-removebg-preview.png" style="height:120px;"></div>
+<div style="margin-top:50px;margin-bottom:15px"><button onclick="logIn()" type="buton" style="padding: 10px 75px 10px 75px;">Log in</button></div>
+<div style="margin-bottom:50px;"><button onclick="singUp()" type="buton">Sign up</button></div>
+    </div>
+</div>
+</div>
+<script>
+var modal = document.getElementById('create-profile');
+
+window.onclick = function(event) {
+if (event.target == modal) {
+  modal.style.display = "none";
+}
+}
+</script>
    <!--Login form-->
-   <div id="id01" class="modal">
+   <div id="Log-in-forum" class="modal">
      <div class="login-background">
      <form class="modal-content animate" action="/action_page.php" method="post" style="width:100%;margin:5px 5px 5px 5px;">
-        
-     <h2>Login</h2>
+      <span onclick="document.getElementById('Log-in-forum').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <div><img src="weblogo-removebg-preview.png" style="height:80px;padding-top:30%;padding-left:10px;"></div>
+      <h2 style="margin: 0 0 50px 0;">Login</h2>
    
      <div class="user-box">
        <input type="text" name="" required="" id="username">
          <label>Username</label>
      </div>
-     <div class="user-box">
-       <input type="text" name="" required="" id="email">
-         <label>Email</label>
-     </div>
-     <div class="user-box">
+     <div class="user-box" style="margin-bottom:110px;">
        <input type="password" name="" required="" id="pass">
          <label>Password</label>
      </div>     
-   
-     <input type="submit" value="Submit" onClick="login()">
-     
+   <div class="submit">
+     <button type="submit" onClick="login()">Submit</button>
+     </div>
     </form>
      </div>
    </div>
-   <script>
-   var modal = document.getElementById('id01');
-   // When the user clicks anywhere outside of the modal, close it
-   window.onclick = function(event) {
-       if (event.target == modal) {
-           modal.style.display = "none";
-       }
-   }
-   </script>
+<!--SING UP form-->
+   <div id="Sing-up-forum" class="modal">
+    <div class="login-background">
+    <form class="modal-content animate" action="/action_page.php" method="post" style="width:100%;margin:5px 5px 5px 5px;">
+     <span onclick="document.getElementById('Sing-up-forum').style.display='none'" class="close" title="Close Modal">&times;</span>
+     <div><img src="weblogo-removebg-preview.png" style="height:80px;padding-top:30%;padding-left:10px;"></div>
+     <h2>Login</h2>
+  
+     <div class="user-box">
+      <input type="text" name="" required="" id="username">
+        <label>Full name</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required="" id="email">
+        <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required="" id="username">
+        <label>Username</label>
+    </div>
+    <div class="user-box" style="margin-bottom:50px">
+      <input type="password" name="" required="" id="pass">
+        <label>Password</label>
+    </div>     
+  <div class="submit">
+    <button type="submit" onClick="login()">Submit</button>
+    </div>
+   </form>
+    </div>
+  </div>
+   <script src="log-in-display.js"></script>
+  
   
   <div class="slideshow-container">
     <div class="mySlides fade">
