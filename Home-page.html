@@ -186,7 +186,7 @@ if (event.target == modal) {
   <div class="flex-footer-container">
     <div class="footer-txt"><a href="about-us.html" target="_self">about us</a></div>
     <div class="footer-txt"><a  href="privacy-policy.html" target="_self">privaci policy</a></div>
-    <div class="footer-txt"><a href="error">report error</a></div>
+    <div class="footer-txt"><a onclick="document.getElementById('idReportError').style.display='block'" style="width:auto;">report error</a></div>
     <div class="footer-txt"><a onclick="document.getElementById('idCoockies').style.display='block'" style="width:auto;">cookie details</a></div>
     <div style="margin-bottom:0px;margin-top:60px;flex:100%">Follow</div>    
     <div style="width:20px;"><a href="facebook"><img src="facebooklogo.png"></a></div>
@@ -233,5 +233,18 @@ if (event.target == modal) {
        resultDiv.style.paddingRight = '10px';
      }
    </script>
+   <!--report error block dislay-->
+ <div id="idReportError" class="modal-for-cookies">
+  <div class="modal-content-for-report-error animate-for-cookies" action="/action_page.php" method="post">
+ <div class="flex-coockies-container-for-cookies" >
+   <div class="flex-header-for-cookies"><img src="weblogo.PNG" style="width:80px;"></div>    
+ <div class="flex-write-report-error">
+ <div class="textarea">
+       <textarea id="w3review" name="w3review" rows="1" cols="50" placeholder=" "></textarea>
+       <label class="label">Username</label>
+       <textarea id="w3review" name="w3review" rows="8" cols="50" placeholder=" " style="margin-top:1vw;"></textarea>
+       <label class="label" style="padding: 77px 0 0 15px;">Report error</label>
+     <button type="button" style="font-size:13px;margin-top:0.5vw;">Send report</button>
+    </div>
 </body>
 </html>
