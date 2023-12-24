@@ -129,7 +129,6 @@
   .flex-info-container-for-cookies {
    color:grey;
     text-align:left;
-    font-size: 17px;
     flex:75%;
     -webkit-flex: 70%;
     -ms-flex: 3;
@@ -177,6 +176,7 @@
     border-radius:2px;
     background: rgb(0, 94, 255);
   }
+
   /*added new styles needed for REPORT ERROR block*/
   .modal-content-for-report-error {
     border-radius:5px;
@@ -194,6 +194,16 @@ width: 60%;
 .modal-content-for-report-error {
 width: 80%;
 }
+.modal-content-for-cookies {
+  width:90%;
+}
+.flex-collom-for-cookies > div {
+  font-size: 13px;
+}
+.flex-footer-for-cookies button{
+  font-size: 16px;
+}
+
 }
 .flex-write-report-error {
   text-align:left;
