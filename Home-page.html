@@ -19,7 +19,7 @@
     <div class="nav-dropdown" style="width:120px; padding-bottom:12px;"><a href="javascript:void(0)" class="nav-dropbtn" href="#discovery">Discover</a>
       <div class="nav-dropdown-content">
         <a href="#">Books</a>
-        <a href="#">Nutritions</a>
+        <a href="Nutrition.html" target="_self">Nutritions</a>
         <a href="#">Trainers</a>
       </div>
     </div>
@@ -28,38 +28,39 @@
     <div><a onclick="createProfile()" style="width:auto;"><img src="profile.png" style="height:25px;"></a></div>   
   </div>
   </div>
+   <!--Navigator-for-mobile-->
   <div class="nav-mobile">
     <div class="flex-nav-container-mobile">
       <button onclick="menuDropdown()" class="menu-dropbtn" href="#discovery">Menu</button>    
             <div id="menu-dropdown-content-id" class="menu-dropdown-content">
               <a href="MySpace">My Space</a>
-              <a href="#discovery">Discover</a>
               <a href="#trainer">Trainers</a>
+              <a href="Nutrition.html" target="_self">Nutritions</a>
+              <a href="#discovery">Books</a>
             </div>
+            <div id="drop-dropdown-background" class="drop-dropdown-background"></div>
       <div style="margin:0px 25% 0px 25%;"><a href="Home-page.html" target="_self"><img src="weblogo.PNG" class="websode-logo"></a></div> 
       <div style="margin-top:41px;"><a onclick="createProfile()" style="width:auto;"><img src="profile.png" style="height:22px;padding-top:7px;padding-left:5px"></a></div>   
     </div>
     </div>
     <script>
-      /* When the user clicks on the button, 
-      toggle between hiding and showing the dropdown content */
       function menuDropdown() {
-        document.getElementById("menu-dropdown-content-id").classList.toggle("show");
+        var dropdownContent = document.getElementById("menu-dropdown-content-id");
+        var background = document.getElementById("drop-dropdown-background");
+        
+        dropdownContent.style.display = 'block';
+        background.style.display = 'block';
       }
-      // Close the dropdown if the user clicks outside of it
-      window.onclick = function(event) {
-        if (!event.target.matches('.menu-dropbtn')) {
-          var dropdowns = document.getElementsByClassName("menu-dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-              openDropdown.classList.remove('show');
-            }
-          }
-        }
-      }
-      </script>
+  
+      // Close the dropdown when clicking on the grey background
+      document.getElementById("drop-dropdown-background").addEventListener("click", function() {
+        var dropdownContent = document.getElementById("menu-dropdown-content-id");
+        var background = document.getElementById("drop-dropdown-background");
+        
+        dropdownContent.style.display = 'none';
+        background.style.display = 'none';
+      });
+    </script>
    <!--Navigator-background--><div class="navigator-background"></div>
    <div id="create-profile" class="modal">
     <div class="login-background">

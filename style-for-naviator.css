@@ -111,7 +111,7 @@ div.nav-dropdown {
   text-align:center;
 }
 .menu-dropdown-content {
-  margin-top: 102px;
+  margin-top: 75px;
   font-size:18px;
   display: none;
   position: absolute;
@@ -164,6 +164,14 @@ div.nav-dropdown {
   height:70px;
 }
 }
+.drop-dropdown-background {
+  background-color: rgba(128, 128, 128, 0.553);
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+}
 /*Navigator-END*/
 .navigator-background {
   padding-top:150px;
@@ -175,7 +183,7 @@ div.nav-dropdown {
 }
 @media screen and (max-width: 500px) {
   .navigator-background {
-    padding-top:110px;
+    padding-top:75px;
   }
 }
 /*Login form-START*/
