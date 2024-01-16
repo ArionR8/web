@@ -194,7 +194,11 @@ width: 60%;
 .modal-content-for-report-error {
 width: 80%;
 }
+.modal-content-for-cookies {
+  width: 90%;
+  }
 }
+
 .flex-write-report-error {
   text-align:left;
   flex:100%;
