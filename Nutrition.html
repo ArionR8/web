@@ -1,160 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <title>title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            overflow-x:hidden;
-        }
-        .paralax{
-            position:absolute;
-            height:100%;
-        }
-        .paralax-item {
-            position:fixed;
-            width:100%;
-            height:100%;
-            top:0;
-            left:0;
-        }
-        .p-item1 {
-            background: url("7f59589dbea80f8702d0790698db6d8d.jpg") center/cover no-repeat;
-        }
-        .p-item3{
-            background: url("tree-ai-brush-removebg-d3ru9oc.png") bottom/100% no-repeat;
-            background-size:cover;
-            background-position:center;
-            z-index:2;
-        }
-        .morning-dishes{
-            padding-top:10%;
-            margin-left:15%;         
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    position:relative;
-    z-index:1;
-}
-.lunch-dishes{
-    padding-top:13%;
-    margin-left:29%;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    position:relative;
-    z-index:1;
-}
-.dinner-dishes{
-    padding-bottom:5%;
-    padding-top:15%;
-    margin-left:29%;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-    position:relative;
-    z-index:1;
-}
-.dishes{
-    background-color: rgba(255, 255, 255, 0.544);
-    width:270px;
-    height:460px;
-    border-radius:10px;
-    margin-right:10px;
-}
-.dishes-status{
- display:flex;
- flex-wrap:wrap;
-}
-.dishes-status > div{
-  font-size:15px;
-    padding:0 0 0 0;
-    margin:4px 0px 0px 4px;
-    border:none;
-    border-radius:100px;
-    border-width:3.5px;
-    border-color:blue;
-    border-style: solid;
+    <title>HappyMindset</title>
+    <link rel="icon" type="image/x-icon" href="logo.PNG">
     
-}
-.dishes-info{
-    width:100%;
-    box-shadow: 0px -5px 10px rgba(35, 35, 35, 0.471);
-    background-color:white;
-    border-bottom-right-radius:10px;
-    border-bottom-left-radius:10px;
-}
-.dishes-info >h1{
-  font-size:25px;
-    padding:5px 0 0 10px;
-}
-.dishes-info >p{
-    font-size:18px;
-    padding:0px 10px 0 15px;
-}
-.dishes-stars{
-    font-size:15px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: end;
-    padding:0 10px 4px 0;
-    margin-top:-16px;
-}
-.dishes-img{
-    display:flex;
-    flex-wrap:Wrap;
-    justify-content: center;
-}
-
-.sign {
-    position:fixed;
-    z-index:2;
-  line-height:43px;
-  text-align: center;
-  left:12%;
-  height:320px;
-  width:250px;
-  background: url("sign2.png") center/cover no-repeat;
-    }
-    .sign ul {
-            list-style: none;
-            padding-top:90px;
-            padding-right:30px;
-        }
-        .sign a {
-            text-decoration: none;
-            color: white;
-            font-family: "Brush Script MT", cursive;
-            font-size: 33px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .sign a:hover {
-            color:black;
-        }
-        .sign a.active {
-            color:black;
-        }
-
-        .home-link {
-            top: 50%;
-      transform: translateY(-50%);
-      margin-left:-1%;
-            font-size:15px;
-            position:fixed;
-            z-index:2;
-            writing-mode: vertical-lr;
-        }
-        .home-link a{
-            color:white;
-            text-decoration: none;
-            background-color: rgb(128, 128, 128);
-            border-radius:10px;
-            padding:8px 5px 8px 20px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-for-nutrition.css">
 </head>
 <body>
     
@@ -174,31 +25,10 @@
       </ul>
       </div>
 <div class="home-link">
-    <h1><a href="Home-page.html">HappyMindset</a></h1>
+    <h1><a href="Home-page.php" target="_self">HappyMindset</a></h1>
 </div>
 
-      <script>
-        document.addEventListener("scroll", function () {
-            var divs = document.querySelectorAll('div[id^="div"]');
-            var navLinks = document.querySelectorAll('.sign a');
 
-            var currentDiv = '';
-            divs.forEach(function (div) {
-                var divTop = div.offsetTop - 70;
-                var divBottom = divTop + div.clientHeight;
-                if (window.scrollY >= divTop && window.scrollY < divBottom) {
-                    currentDiv = div.id;
-                }
-            });
-
-            navLinks.forEach(function (link) {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === currentDiv) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 
     <div class="morning-dishes" id="div1">
       <div class="dishes" style="margin-left:16%;">
@@ -216,7 +46,7 @@
   Dip bread slices in the mixture and cook on a buttered skillet until golden brown 
   (2-3 mins per side). Top with syrup, sugar, or fresh fruit for a delightful start to your 
   day. Elevate your breakfast with this delicious homemade French toast!</p>
-  <div class="dishes-stars">
+  <div class="dishes-stars" id="frenchtoast-stars">
       <div>&#11088;</div>
       <div>&#11088;</div>
       <div>&#11088;</div>
@@ -288,7 +118,7 @@
           <h1>Grilled Chicken Salad</h1>
           <p>Savor the freshness of our Grilled Chicken Salad-a delightful mix of tender grilled chicken, crisp greens, cherry tomatoes, and cucumbers. 
           This protein-packed salad offers a burst of flavors, creating a satisfying and nutritious lunch option.</p>
-          <div class="dishes-stars" style="padding:30px 5px 0px 0;">
+          <div class="dishes-stars"  id="grill-stars">
               <div>&#11088;</div>
               <div>&#11088;</div>
               <div>&#11088;</div>
@@ -309,7 +139,7 @@
               <h1>Turkey and Avocado Wrap</h1>
               <p>Experience a burst of freshness with our Turkey and Avocado Wrap. Succulent slices of lean turkey meet the creamy richness of avocado, 
           nestled in a whole-grain wrap. It's the perfect choice for a delicious and nutritious lunch.</p>
-              <div class="dishes-stars" style="padding:0px 0px 5px 0;">
+              <div class="dishes-stars" id="turkey-stars" >
                   <div>&#11088;</div>
                   <div>&#11088;</div>
                   <div>&#11088;</div>
@@ -331,7 +161,7 @@
               <h1>Shrimp and Quinoa Salad</h1>
               <p>Savor our Shrimp and Quinoa Salad-a protein-packed blend of succulent shrimp, fluffy quinoa, cherry tomatoes, creamy avocado, and arugula. 
               Tossed in a light lemon vinaigrette, it's a refreshing and satisfying lunch choice, brimming with vibrant.</p>
-              <div class="dishes-stars" style="padding:0px 0px 5px 0;">
+              <div class="dishes-stars" id="shrimp-stars">
                   <div>&#11088;</div>
                   <div>&#11088;</div>
                   <div>&#11088;</div>
@@ -357,7 +187,7 @@
               <h1>Baked Salmon</h1>
               <p>Indulge in our Baked Salmon with Roasted Vegetables-a symphony of succulent salmon paired with vibrant, oven-roasted veggies. 
           Seasoned to perfection, this dish is a delightful blend of rich omega-3s and caramelized goodness, offering a quick, wholesome, and flavorful dinner option. </p>
-              <div class="dishes-stars">
+              <div class="dishes-stars" id="salmon-stars">
                   <div>&#11088;</div>
                   <div>&#11088;</div>
                   <div>&#11088;</div>
@@ -402,7 +232,7 @@
                       <h1>Chicken with Quinoa and Spinach</h1>
               <p>Indulge in the simplicity of our Grilled Chicken with Quinoa and Spinach. Grilled chicken meets the duo of quinoa and 
   spinach for a protein-packed and nutrient-rich. This balanced dish is a delightful and healthful dining experience.</p>
-                      <div class="dishes-stars" style="padding:10px 0px 5px 0;"> 
+                      <div class="dishes-stars" id="quinoa-stars"> 
                           <div>&#11088;</div>
                           <div>&#11088;</div>
                           <div>&#11088;</div>
@@ -410,5 +240,12 @@
                       </div>
                       </div>
   </div>
+
+
+<div class="rotate-phone"></div>
+
+ <!--Nutrition JAVA SCRIPT file-link is HERE!-->
+      <script src="functions-for-nutrition.js"></script>
+      
 </body>
 </html>

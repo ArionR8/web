@@ -177,7 +177,7 @@
     background: rgb(0, 94, 255);
   }
 
-  /*added new styles needed for REPORT ERROR block*/
+  /*styles needed for REPORT ERROR block*/
   .modal-content-for-report-error {
     border-radius:5px;
     background-color: #fefefe;
@@ -223,9 +223,9 @@ width:95%;
   background-color: rgb(193, 193, 193);
   color: white;
   padding: 25px 0px 5px 15px;
-   resize: none; /* Disable textarea resizing */
-  outline: none; /* Remove default focus outline */
-  transition: border-color 0.3s; /* Add a smooth transition for border color */
+   resize: none;
+  outline: none;
+  transition: border-color 0.3s;
 }
  .textarea textarea:focus {
    box-shadow: 0px 0.5px 2px rgba(51, 51, 51, 0.75);
