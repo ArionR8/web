@@ -26,7 +26,7 @@
         <span class="carusel-txt">the transformative</span> <span class="carusel-txt"> magic </span>
         <span class="carusel-txt">of literature</span><span class="carusel-txt">nurture</span>
         <span class="carusel-txt">your mental</span> <span class="carusel-txt">well-being. </span><br><br><br>
-        <span class="carusel-txt" style="text-shadow: 0px 0px 0px ;"><a href="#div" style="font-size:3vw;color:white;background-color:rgb(57, 160, 245);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
+        <span class="carusel-txt" style="text-shadow: 0px 0px 0px ;"><a href="Library.php" target="_self" style="font-size:3vw;color:white;background-color:rgb(57, 160, 245);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
       </h1></div>
   <img src="books.jpg" style="width:100%;">
     </div>
@@ -38,7 +38,7 @@
       <span class="carusel-txt">nutrition,</span> <span class="carusel-txt"> innovative </span>
       <span class="carusel-txt">dishes, </span><span class="carusel-txt"> and </span>
       <span class="carusel-txt">their </span> <span class="carusel-txt">recipes.</span><br><br><br><br>
-      <span class="carusel-txt" style="text-shadow: 0px 0px 0px ;"><a href="#div" style="font-size:3vw;color:white;background-color:rgb(57, 160, 245);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
+      <span class="carusel-txt" style="text-shadow: 0px 0px 0px ;"><a href="Nutrition.html" target="_self" style="font-size:3vw;color:white;background-color:rgb(57, 160, 245);border-radius:5px; padding:5px 15px 5px 15px;">Dive into our guides</a></span>
     </h1></div>
   <img src="food.jpg" style="width:100%;">
     </div>

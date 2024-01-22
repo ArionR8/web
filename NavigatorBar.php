@@ -4,7 +4,7 @@
     <div><a href="MySpace">My Space</a></div> 
     <div class="nav-dropdown" style="width:120px; padding-bottom:12px;"><a href="javascript:void(0)" class="nav-dropbtn" href="#discovery">Discover</a>
       <div class="nav-dropdown-content">
-        <a href="#">Books</a>
+        <a href="Library.php" target="_self">Books</a>
         <a href="Nutrition.html" target="_self">Nutritions</a>
         <a href="#">Trainers</a>
       </div>
@@ -22,7 +22,7 @@
               <a href="MySpace">My Space</a>
               <a href="#trainer">Trainers</a>
               <a href="Nutrition.html" target="_self">Nutritions</a>
-              <a href="#discovery">Books</a>
+              <a href="Library.php" target="_self">Books</a>
             </div>
             <div id="drop-dropdown-background" class="drop-dropdown-background"></div>
       <div style="margin:0px 25% 0px 25%;"><a href="Home-page.php" target="_self"><img src="weblogo.PNG" class="websode-logo"></a></div> 
