@@ -1,4 +1,4 @@
-<div class="nav-pc">
+<div class="nav-pc" id="navigator">
   <div class="flex-nav-container">
     <div style="flex:100%"><a  href="Home-page.php" target="_self"><img src="weblogo.PNG" style="height:100px;"></a></div> 
     <div><a href="MySpace">My Space</a></div> 
@@ -15,7 +15,7 @@
   </div>
   </div>
    <!--Navigator-for-mobile-->
-  <div class="nav-mobile">
+  <div class="nav-mobile" id="navigator">
     <div class="flex-nav-container-mobile">
       <button onclick="menuDropdown()" class="menu-dropbtn" href="#discovery">Menu</button>    
             <div id="menu-dropdown-content-id" class="menu-dropdown-content">

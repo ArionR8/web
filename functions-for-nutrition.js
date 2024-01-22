@@ -20,3 +20,26 @@ document.addEventListener("scroll", function () {
         }
     });
 });
+
+
+//Notification block
+    var seconds = 5;
+
+    function updateTimer() {
+        document.getElementById('timer').innerText = seconds;
+    }
+
+    function hideDiv() {
+        var divToRemove = document.getElementById('notification');
+        divToRemove.style.display = 'none';
+    }
+
+    var countdown = setInterval(function() {
+        updateTimer();
+        seconds--;
+
+        if (seconds < 0) {
+            clearInterval(countdown);
+            hideDiv();
+        }
+    }, 1000);

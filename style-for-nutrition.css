@@ -21,6 +21,44 @@ body {
     background-position:center;
     z-index:2;
 }
+
+.notification {
+    position:absolute;
+    left:65%;
+    z-index: 4;
+    justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
+    width:250px;
+    height:180px;
+    z-index:4;
+    background-color:white;
+    border-radius: 10px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 20% 75%, 10% 90%, 10% 75%, 0 75%);
+}
+.notification > div{
+    height:28px;
+font-size:20px;
+margin:3px 10px 0px 7px;
+border:none;
+border-radius:100px;
+border-width:4px;
+border-color:green;
+border-style: solid;
+}
+.notification > p{
+    font-family: 'Brush Script MT', cursive;
+    margin:-50px 0 0 5px;
+    font-size:18px;
+flex:100%;
+}
+#timer{
+    position:absolute;
+    margin:5px 0 0 220px;
+    font-family: Copperplate, Papyrus, fantasy;
+    color:red;
+}
+
 .morning-dishes{
     padding-top:10%;
     margin-left:15%;         
@@ -62,7 +100,6 @@ flex-wrap:wrap;
 }
 .dishes-status > div{
 font-size:15px;
-padding:0 0 0 0;
 margin:4px 0px 0px 4px;
 border:none;
 border-radius:100px;
