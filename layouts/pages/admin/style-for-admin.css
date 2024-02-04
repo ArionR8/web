@@ -1,0 +1,76 @@
+body{
+    margin:0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,100;1,200;1,400&display=swap');
+  .show {display: block;}
+  
+.admin-container{
+    position: absolute;
+    height: 100%;
+    width: 100%; 
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
+    
+}
+.admin-nav{
+    width:200px;
+    height:100%;
+    font-size:25px;
+    padding-left:10px;
+    background-color: #294273;
+    color:white;
+}
+li >a , a:hover{
+    text-decoration: none;
+    color:white;
+}
+li{
+    font-size: 28px;
+   list-style: none;
+   margin:15px 0 15px -50px;
+    padding:5px 10px 5px 20px;
+}
+li:hover, li.active {
+    background-color: #A9B9D9;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+.admin-display-box{
+    height:100%;
+    width:91%;
+    background-color: #A9B9D9;
+    overflow: auto;  
+}
+.home-image-nav{
+    height:25px;margin-bottom:-3px;
+}
+.logout-img-nav{
+height:20px; margin-bottom:-3px;
+}
+.display-box-dashboart{
+    margin-top:50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    gap:20px;
+}
+.display-box-dashboart > div > p{
+    text-align: center;
+    font-size: 25px;
+}
+.display-box-dashboart > div{
+    border-radius: 10px;
+    width:320px;
+    height:320px;
+    border: 2px solid #294273;
+    background-color: white;
+}
+.display-box-dashboart > div:hover{
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.225);
+}
